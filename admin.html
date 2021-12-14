@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<style type="text/css">
+.button {
+	background-color: skyblue;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+.a {
+	background-color: skyblue;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+table tbody {
+	width: 900px;
+}
+
+input {
+	height: 25px;
+	width: 180px;
+	margin-left: 10px;
+}
+
+table tr td label {
+	text-align: right;
+	display: inline-block;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0 1em;
+	display: inline-block;
+	margin-top: 30px;
+	width: 900px;
+}
+
+table tr td {
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: right;
+}
+
+table tr {
+	padding: 15px;
+}
+</style>
+
+<style type="text/css">
+.label {
+	margin-left: 10px;
+	width: 180px;
+	display: inline-block;
+}
+</style>
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+footer {
+	width: 100%;
+	background: black;
+	float: left;
+	color: white;
+	padding: 30px 0;
+}
+
+footer .footer-box {
+	width: 25%;
+	float: left;
+	height: 100%;
+}
+
+footer .footer-box a {
+	display: block;
+	font-family: Gotu;
+	color: white;
+	font-size: 20px;
+	text-transform: capitalize;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-image: url("place3.jpg");
+	background-size: cover;
+	height: 650px;
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px;
+	background-color: rgb(456, 0, 119);
+	color: #fff;
+	width: 100%;
+}
+
+.nav-links a {
+	color: #fff;
+}
+/* LOGO */
+.logo {
+	font-size: 40px;
+	color: black;
+}
+
+.logo:hover {
+	color: blanchedalmond;
+}
+/* NAVBAR MENU */
+.menu {
+	display: flex;
+	gap: 5em;
+	font-size: 24px;
+}
+
+.menu li a:hover {
+	color: black;
+	border-radius: 1px;
+}
+
+.menu li {
+	padding: 5px 14px;
+}
+
+#home {
+	height: 720px;
+	background-color: "skyblue";
+	text-align: center;
+	padding-top: 300px;
+	margin-top: 0px;
+	font-size: 72px;
+	color: bisque;
+}
+
+#appointment {
+	background-color: rgb(178, 236, 186);
+	height: 650px;
+}
+
+.Appointments {
+	text-align: center;
+	padding-top: 300px;
+	font-size: 72px;
+	padding-bottom: 60px;
+	color: black;
+}
+</style>
+
+<style>
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+@font-face {
+	font-family: Gotu;
+	src: url("../font/Gotu-Regular.ttf");
+}
+
+@font-face {
+	font-family: Muli;
+	src: url("../font/Muli-VariableFont_wght.ttf");
+}
+
+footer .footer-box {
+	width: 25%;
+	float: left;
+	height: 100%;
+}
+
+footer .footer-box a {
+	display: block;
+	font-family: Gotu;
+	color: white;
+	font-size: 20px;
+	text-transform: capitalize;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+footer {
+	width: 100%;
+	background: black;
+	float: left;
+	color: white;
+	padding: 30px 0;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	font-family: Gotu;
+}
+
+section p {
+	font-size: 22px;
+	text-align: justify;
+}
+
+.w-80 {
+	width: 80%;
+	height: auto;
+	margin: auto;
+	padding: 10px 10px;
+}
+
+section .section-img {
+	width: 100%;
+	height: 480px;
+	background: url("images/1.jpg") no-repeat;
+	background-size: cover;
+}
+
+.slideInRight {
+	-webkit-animation-name: slideInRight;
+	animation-name: slideInRight;
+}
+
+section .section-bg-box h1 {
+	background: green;
+	color: white;
+	font-size: 50px;
+	width: 50%;
+	margin: auto;
+}
+
+section .section-bg-box h2 {
+	background: blue;
+	color: white;
+	width: 50%;
+	margin: auto;
+	font-size: 20px;
+}
+
+section .section-bg-box {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	text-align: center;
+	padding: 150px 0;
+}
+
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.slideInLeft {
+	-webkit-animation-name: slideInLeft;
+	animation-name: slideInLeft;
+}
+
+section .welcome-text {
+	font-size: 35px;
+	text-transform: uppercase;
+	background: red;
+	width: 60%;
+	padding: 0 5px;
+	color: white;
+}
+
+body .menu {
+	width: 100%;
+	height: 55px;
+	margin: auto;
+	padding: 0 10px;
+	background: blue;
+}
+
+body .menu .brand-name {
+	width: 35%;
+	float: left;
+	pointer-events: none;
+}
+
+body .menu .brand-name a {
+	text-decoration: none;
+}
+
+body .menu .brand-name h2 {
+	font-family: Gotu;
+	font-size: 30px;
+	color: white;
+	width: 650px;
+}
+/* start nav ul li coding */
+body .menu nav {
+	float: left;
+}
+
+body .menu nav ul {
+	list-style: none;
+}
+
+body .menu nav ul li {
+	display: inline-block;
+	margin: 8px 10px;
+	padding: 2px 10px;
+}
+
+body .menu nav ul li:hover {
+	border: none;
+	border-bottom: 3px solid red;
+}
+
+body .menu nav ul li:hover a {
+	color: #00bcd4;
+}
+
+body .menu nav ul li a {
+	color: white;
+	text-decoration: none;
+	font-family: Gotu;
+	font-size: 22px;
+	font-weight: bold;
+}
+</style>
+
+<meta charset="ISO-8859-1">
+<title>Admin page</title>
+</head>
+<body>
+	<div class="menu">
+		<nav>
+			<ul>
+				<li style="margin-left: 350px"><a th:href="@{/home}">Home</a></li>
+				<li><a th:href="@{/login}">Admin </a></li>
+				<li><a th:href="@{/doctorlogin}">Doctor </a></li>
+				<li><a th:href="@{/patient}">Patient </a></li>
+				<li><a th:href="@{/contact}">Contact Us</a></li>
+
+			</ul>
+		</nav>
+	</div>
+	<div id="container">
+		<ul>
+			<li>
+				<section id="adddoctor">
+					<div class="container">
+
+						<nav class="navbar">
+							<!-- LOGO -->
+							<div class="logo">Doctor Details</div>
+							<!-- NAVIGATION MENU -->
+							<ul class="nav-links">
+								<!-- USING CHECKBOX HACK -->
+
+								<!-- NAVIGATION MENUS -->
+
+							</ul>
+						</nav>
+						<form th:action="@{/adddoctor}" th:object="${doctor}"
+							method="post" style="background-color: bisque" action="">
+							<table>
+								<tr>
+									<td><label for="fullname" class="label"><b>
+												First Name :</b></label></td>
+									<td><input type="text" id="fname" name="firstName"
+										placeholder="firstName"
+										style="margin-top: 10px; height: 20px; width: 180px" required>
+									</td>
+								</tr>
+								<tr>
+									<td><label for="fullname" class="label"><b>
+												Last Name :</b></label></td>
+									<td><input type="text" id="lname" name="lastName"
+										placeholder="lastName"
+										style="margin-top: 10px; height: 20px; width: 180px" required>
+									</td>
+								</tr>
+								<tr>
+									<td><label for="fullname" class="label"><b>Department
+												:</b></label></td>
+									<td><input type="text" id="lname" name="department"
+										placeholder="Department"
+										style="margin-top: 10px; height: 20px; width: 180px" required></td>
+								</tr>
+								<tr>
+									<td><label for="fullname" class="label"><b>Qualification
+												:</b></label></td>
+									<td><input type="text" id="lname" name="qualification"
+										placeholder="Qualiication"
+										style="margin-top: 10px; height: 20px; width: 180px" required>
+									</td>
+								</tr>
+								<tr>
+									<td><label for="fullname" class="label"><b>
+												Experience :</b></label></td>
+									<td><input type="text" id="lname" name="experience"
+										placeholder="Experience"
+										style="margin-top: 10px; height: 20px; width: 180px" required>
+									</td>
+								</tr>
+								<tr>
+									<td><label for="fullname" class="label"> <b>
+												Contact No :</b></label></td>
+									<td><input type="text" id="lname" name="contactno"
+										placeholder="Contact No"
+										style="margin-top: 10px; height: 20px; width: 180px" required>
+									</td>
+								</tr>
+								<tr>
+									<td><label for="fullname" class="label"><b>
+												Email :</b></label></td>
+									<td><input type="text" id="lname" name="email"
+										placeholder="email"
+										style="margin-top: 10px; height: 20px; width: 180px" required>
+									</td>
+								</tr>
+								<tr>
+									<td><label for="fullname" class="label"><b>
+												Password :</b></label></td>
+									<td><input type="password" id="password" name="password"
+										placeholder="password" minlength="6" maxlength="10"
+										style="margin-top: 10px; height: 20px; width: 180px" required>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align: center">
+
+										<button class="button">Add</button>
+									</td>
+									<td>
+									<a class="a" th:href="@{/viewdoctors}">View Doctors</a>
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+
+
+
+				</section>
+
+			</li>
+
+		</ul>
+
+		<li
+			style="margin-top: 30px; background-color: pink; font-size: 30px; width: 170px;margin-left:100px"></li>
+	</div>
+	<footer style="margin-top: 25px">
+		<div>&copy; All rights are reserved under Alpha Health Care Hospital</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+@charset "utf-8";
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+@font-face{
+	font-family: Gotu;
+	src :url(../font/Gotu-Regular.ttf);
+}
+@font-face{
+	font-family: Muli;
+	src:url(../font/Muli-VariableFont_wght.ttf);
+}
+footer .footer-box {
+    width: 25%;
+    float: left;
+    height: 100%;
+}
+footer .footer-box a {
+    display: block;
+    font-family: Gotu;
+    color: white;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+footer {
+    width: 100%;
+    background: black;
+    float: left;
+    color: white;
+    padding: 30px 0;
+}
+body{
+	width: 100%;
+	height: 100%;
+	font-family: Gotu;
+}
+section p {
+    font-size: 22px;
+    text-align: justify;
+}
+.w-80{
+	width: 80%;
+	height: auto;
+	margin: auto;
+	padding: 10px 10px;
+}
+section .section-img {
+    width: 100%;
+    height: 480px;
+    background: url("images/1.jpg") no-repeat;
+    background-size: cover;
+}
+.slideInRight {
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
+}
+section .section-bg-box h1 {
+    background: green;
+    color: white;
+    font-size: 50px;
+    width: 50%;
+    margin: auto;
+}
+section .section-bg-box h2 {
+    background: blue;
+    color: white;
+    width: 50%;
+    margin: auto;
+    font-size: 20px;
+}
+section .section-bg-box {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+    padding: 150px 0;
+    }
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+}
+section .welcome-text {
+    font-size: 35px;
+    text-transform: uppercase;
+    background: red;
+    width: 60%;
+    padding: 0 5px;
+    color: white;
+}
+
+body .menu{
+	width: 100%;
+	height: 55px;
+	margin: auto;
+	padding: 0 10px;
+	background: blue;
+}
+
+body .menu .brand-name{
+	width: 35%;
+	float: left;
+    pointer-events: none;
+}
+body .menu .brand-name a{
+	text-decoration: none;
+}
+body .menu .brand-name h2{
+	font-family: Gotu;
+	font-size: 30px;
+	color: white;
+	width:650px;
+}
+/* start nav ul li coding */
+body .menu nav{
+	float: left;
+}
+
+body .menu nav ul{
+	list-style: none;
+}
+
+body .menu nav ul li{
+	display: inline-block;
+	margin: 8px 10px;
+	padding: 2px 10px;
+}
+
+body .menu nav ul li:hover{
+	border:none;
+	border-bottom: 3px solid red;
+}
+
+body .menu nav ul li:hover a{
+	color: #00bcd4;
+}
+
+body .menu nav ul li a{
+	color: white;
+	text-decoration: none;
+	font-family: Gotu;
+	font-size: 22px;
+	font-weight: bold;
+}
+</style>
+<style>
+.label {
+margin-left:10px;
+width:90px;
+display:inline-block;
+font-size:15px;
+text-align:right;
+}
+.input {
+margin-left:10px;
+width:200px;
+display:inline-block;
+font-size:15px;
+text-align:right;
+height:25px;
+}
+.table{
+
+    display: inline-block;
+text-align:center;
+    }
+    table tbody tr td{
+    padding: 5px;
+    }
+    .button{
+    width:100px;
+    height:25px;
+    margin-left:60px;
+    }
+
+footer {
+    width: 100%;
+    background: black;
+    float: left;
+    color: white;
+    padding: 30px 0;
+}
+footer .footer-box {
+    width: 25%;
+    float: left;
+    height: 100%;
+}
+footer .footer-box a {
+    display: block;
+    font-family: Gotu;
+    color: white;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+header{
+	width: 100%;
+	height: 55px;
+	background: blue;
+	float: left;
+}
+
+header .menu{
+	width: 100%;
+	height: 55px;
+	margin: auto;
+	padding: 0 10px;
+}
+
+header .menu .brand-name{
+	width: 35%;
+	float: left;
+    pointer-events: none;
+}
+header .menu .brand-name a{
+	text-decoration: none;
+}
+header .menu .brand-name h2{
+	font-family: Gotu;
+	font-size: 30px;
+	color: white;
+	width:650px;
+}
+/* start nav ul li coding */
+header .menu nav{
+	float: left;
+}
+
+header .menu nav ul{
+	list-style: none;
+}
+
+header .menu nav ul li{
+	display: inline-block;
+	margin: 8px 10px;
+	padding: 2px 10px;
+}
+
+header .menu nav ul li:hover{
+	border:none;
+	border-bottom: 3px solid red;
+}
+
+header .menu nav ul li:hover a{
+	color: #00bcd4;
+}
+
+header .menu nav ul li a{
+	color: white;
+	text-decoration: none;
+	font-family: Gotu;
+	font-size: 22px;
+	font-weight: bold;
+}
+</style>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="keywords" content="HOSPITAL,HOSPITAL.COM,HOSPITAL WEBSITE, MEDICAN">
+	<meta name="description" content="india's best hospital website of indian">
+	<meta name="author" content="hospital.com">
+	<title>hospital Management</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+
+</head>
+
+<body style="text-align:center">
+
+	<div class="menu">
+ <nav>
+         	<ul>
+         		<li style="margin-left:440px"><a th:href="@{/home}">Home</a></li>
+         		<li><a th:href="@{/login}">Admin </a></li>
+				<li><a th:href="@{/doctorlogin}">Doctor </a></li>
+				<li><a th:href="@{/patient}" >Patient </a></li>
+         		<li><a th:href="@{/contact}">Contact Us</a></li>
+				 
+         	</ul>
+         </nav>
+         </div>
+<section>
+	<div class="w-80">
+     <div class="form-box" style="background-color:lightgreen">
+     	<h1  style="background-color:skyblue;margin-top:20px">Contact</h1>
+     	<hr>
+     	<h3 style="margin-top:20px;">Any Queries , Fill Details </h3>
+     	<form th:action="@{/home}" style="background-color:bisque;text-align:center;width:50%;display: inline-block;margin-top:30px" method="post">
+     	<table class="table">
+     	<tr>
+     	<td>
+     		<label for="lblFullName" class="label"><b>Name :</b></label><br/>
+				</td>
+				<td>
+				<input type="text" name="yourname" placeholder="Enter Fullname" class="input" required>
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<label for="email" class="label"><b>email :</b></label>
+				</td>
+				<td>
+				<input type="email" name="email" id="email" placeholder="Enter Your Email" class="input" required>
+				
+				</td>
+				<tr>
+<td>
+
+				<label for="message" class="label"><b>Message :</b></label></td>
+				<td>
+				<textarea name="yourmessage" id="message" placeholder="Enter Your Message" class="input" required></textarea>
+				</td>
+				</tr>
+				<tr>
+<td colspan="2">
+				<button type="submit" id="contact-btn" class="button">Send </button></td></tr>
+</table>
+     	</form>
+     	
+     </div>
+    </div>
+</section>
+<footer style="margin-top:25px">
+	<div>
+	&copy;
+	All rights are reserved under Alpha Health Care  Hospital
+	
+	</div>
+</footer>
+</body>
+</html>

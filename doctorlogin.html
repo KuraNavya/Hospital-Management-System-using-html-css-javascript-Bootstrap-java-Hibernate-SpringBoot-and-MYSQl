@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+.label {
+margin-left:10px;
+width:90px;
+display:inline-block;
+}
+.input{
+margin-left:10px;}
+</style>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+.button {
+	background-color: skyblue;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+input {
+	height: 17px;
+	width: 180px;
+	margin-left: 10px;
+}
+
+table tr td label {
+	text-align: right;
+	display: inline-block;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0 1em;
+	display: inline-block;
+	margin-top: 30px
+}
+
+table tr td {
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: right;
+}
+
+table tr {
+	padding: 15px;
+}
+</style>
+
+</head>
+<body>
+<section id="login">
+	<div class="w-80">
+     <div class="form-box">
+     	
+				<h1
+					style="background-color: skyblue; text-align: center; font-size: 50px">Doctor Login
+					Page</h1>
+     	<hr>
+     		<form th:action="@{/doctor}"
+					style="background-color: lightpink; text-align: center; margin-left: 250px; margin-right: 250px; block-size: 250px"
+					action="">
+					<table>
+						<tr>
+
+							<td><label for="fullname"> User Name: </label></td>
+							<td><input type="text" id="fullname" name="fullname" required/></td>
+
+
+						</tr>
+						<tr>
+							<td><label for="fullname"> Password: </label></td>
+							<td><input type="password" id="Password" name="Password" required/></td>
+
+						</tr>
+						<tr>
+							<td colspan="2" style="text-align: center">
+								<!--  <input type="submit"  style="height:29px;width:80px; background-color: skyblue" type="submit" form="nameform" value="Submit"/>-->
+
+								<button class="button">Submit</button>
+							</td>
+
+						</tr>
+					</table>
+
+				</form>
+			</div>
+    </div>
+</section>
+</body>
+</html>

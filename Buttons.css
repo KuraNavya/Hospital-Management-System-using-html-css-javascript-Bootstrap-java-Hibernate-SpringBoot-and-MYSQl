@@ -1,0 +1,41 @@
+@charset "ISO-8859-1";/*!
+.button {
+	background-color: skyblue;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+input {
+	height: 17px;
+	width: 180px;
+	margin-left: 10px;
+}
+
+table tr td label {
+	text-align: right;
+	display: inline-block;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0 1em;
+	display: inline-block;
+	margin-top: 30px
+}
+
+table tr td {
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: right;
+}
+
+table tr {
+	padding: 15px;
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="keywords" content="HOSPITAL,HOSPITAL.COM,HOSPITAL WEBSITE, MEDICAN">
+	<meta name="description" content="india's best hospital website of indian">
+	<meta name="author" content="hospital.com">
+	<title>Hospital</title>
+	
+	<link rel="stylesheet" type="text/css" href="all.css">
+	<link rel="stylesheet" type="text/css" href="animate.css">
+<style>
+@charset "utf-8";
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+@font-face{
+	font-family: Gotu;
+	src :url(../font/Gotu-Regular.ttf);
+}
+@font-face{
+	font-family: Muli;
+	src:url(../font/Muli-VariableFont_wght.ttf);
+}
+footer .footer-box {
+    width: 25%;
+    float: left;
+    height: 100%;
+}
+footer .footer-box a {
+    display: block;
+    font-family: Gotu;
+    color: white;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+footer {
+    width: 100%;
+    background: black;
+    float: left;
+    color: white;
+    padding: 30px 0;
+}
+body{
+	width: 100%;
+	height: 100%;
+	font-family: Gotu;
+}
+section p {
+    font-size: 22px;
+    text-align: justify;
+}
+.w-80{
+	width: 80%;
+	height: auto;
+	margin: auto;
+	padding: 10px 10px;
+}
+section .section-img {
+    width: 100%;
+    height: 480px;
+    background: url("images/1.jpg") no-repeat;
+    background-size: cover;
+}
+.slideInRight {
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
+}
+section .section-bg-box h1 {
+    background: green;
+    color: white;
+    font-size: 50px;
+    width: 50%;
+    margin: auto;
+}
+section .section-bg-box h2 {
+    background: blue;
+    color: white;
+    width: 50%;
+    margin: auto;
+    font-size: 20px;
+}
+section .section-bg-box {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+    padding: 150px 0;
+    }
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+}
+section .welcome-text {
+    font-size: 35px;
+    text-transform: uppercase;
+    background: red;
+    width: 60%;
+    padding: 0 5px;
+    color: white;
+}
+header{
+	width: 100%;
+	height: 55px;
+	background: blue;
+	float: left;
+}
+
+header .menu{
+	width: 100%;
+	height: 55px;
+	margin: auto;
+	padding: 0 10px;
+}
+
+header .menu .brand-name{
+	width: 35%;
+	float: left;
+    pointer-events: none;
+}
+header .menu .brand-name a{
+	text-decoration: none;
+}
+header .menu .brand-name h2{
+	font-family: Gotu;
+	font-size: 30px;
+	color: white;
+	width:650px;
+}
+/* start nav ul li coding */
+header .menu nav{
+	float: left;
+}
+
+header .menu nav ul{
+	list-style: none;
+}
+
+header .menu nav ul li{
+	display: inline-block;
+	margin: 8px 10px;
+	padding: 2px 10px;
+}
+
+header .menu nav ul li:hover{
+	border:none;
+	border-bottom: 3px solid red;
+}
+
+header .menu nav ul li:hover a{
+	color: #00bcd4;
+}
+
+header .menu nav ul li a{
+	color: white;
+	text-decoration: none;
+	font-family: Gotu;
+	font-size: 22px;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+<!-- Start Header Coding-->
+<header>
+	<div class="menu">
+		<!-- Start Brand name coding-->
+		<div class="brand-name">
+			<a href="index.html">
+				<h2 class="animated flash">
+				<i class="fa fa-hospital"></i>&nbsp;
+				ALPHA HEALTH CARE HOSPITAL</h2>
+			</a>
+		</div>
+		<!-- End Brand name coding-->
+		<!-- Start Nav coding & menu coding -->
+         <nav>
+         	<ul>
+         		<li style="margin-left:340px"><a th:href="@{/home}">Home</a></li>
+         		<li><a th:href="@{/login}">Admin </a></li>
+				<li><a th:href="@{/doctorlogin}">Doctor </a></li>
+				<li><a th:href="@{/patient}" >Patient </a></li>
+         		<li><a th:href="@{/contact}">Contact Us</a></li>
+				 
+         	</ul>
+         </nav>
+		<!-- End Nav coding & menu coding -->
+	</div>
+</header>
+<!-- End Header Coding-->
+<!-- Start Section Coding-->
+<section>
+	<div class="w-80" style="padding: 0;background-color:cornsilk">
+	<div class="section-img">
+		<div class="section-bg-box">
+			<h1 class="animated slideInLeft">Health Care Services</h1>
+			<h2 class="animated slideInRight">We Care About Your Health</h2>
+		</div>
+	</div>
+	<!-- text decoration coding -->
+	<br/><br/>
+	<h1 class="welcome-text">WELCOME TO HOSPITAL SERVICE</h1>
+	<br/><br/>
+	<p>
+		Phasellus pretium orci sit amet mi ullamcorper egestas. Sed non mattis metus. Integer vel lorem tincidunt, pharetra eros nec, posuere odio. Nullam eget bibendum sem, venenatis lacinia justo. Duis aliquet lobortis neque, eget volutpat nulla iaculis a.
+	</p>
+	<br/>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, eveniet omnis perferendis assumenda, adipisci eum esse repellat voluptatibus velit, minus sunt odio accusantium natus consequuntur deleniti voluptatum! Magnam, dicta, officiis!
+	</p>
+	<br/>
+	<p>
+		Phasellus pretium orci sit amet mi ullamcorper egestas. Sed non mattis metus. Integer vel lorem tincidunt, pharetra eros nec, posuere odio. Nullam eget bibendum sem, venenatis lacinia justo. Duis aliquet lobortis neque, eget volutpat nulla iaculis a.
+	</p>
+	<br/>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, eveniet omnis perferendis assumenda, adipisci eum esse repellat voluptatibus velit, minus sunt odio accusantium natus consequuntur deleniti voluptatum! Magnam, dicta, officiis!
+	</p>
+	<br/>
+	<p>
+		Phasellus pretium orci sit amet mi ullamcorper egestas. Sed non mattis metus. Integer vel lorem tincidunt, pharetra eros nec, posuere odio. Nullam eget bibendum sem, venenatis lacinia justo. Duis aliquet lobortis neque, eget volutpat nulla iaculis a.
+	</p>
+	<br/>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, eveniet omnis perferendis assumenda, adipisci eum esse repellat voluptatibus velit, minus sunt odio accusantium natus consequuntur deleniti voluptatum! Magnam, dicta, officiis!
+	</p>
+	<br/>
+	<h1 class="welcome-text">OUR OUTSTANDING SERVICES</h1>
+	<br/>
+	<h2>What We Offer!</h2>
+	
+	<ul>
+		<li>DENTAL IMPLANTS</li>
+		<li>WHITENING</li>
+		<li>VACCINATIONS</li>
+		<li>LABORATORY</li>
+		<li>MEDICAL DRESSAGE</li>
+		<li>EMERGENCY CONTRACEPTION</li>
+	</ul>
+	<br/>
+	<h2>Our Department</h2>
+
+	<ul>
+		<li>DENTAL CARE</li>
+		<li>OTOLOGY</li>
+		<li>CARDIAC</li>
+		<li>HEPATOLOGY</li>
+		<li>ORTHOPEDICS</li>
+		<li>ORTHOPEDICS</li>
+		<li>OUTPATIENT</li>
+		<li>MENTAL HEALTH</li>
+	</ul>
+	<br/>
+	<h1 class="welcome-text" style="width: 25%;">about us</h1>
+	<br/>
+	<h2>Best Medical & Health care Needs to Our Patients</h2>
+	<div class="about-box">
+		<div>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros amet sollicitudin interdum. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			</p>
+			<br/>
+			<p>
+				Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.
+			</p>
+		</div>
+		<div>
+			<img th:src="@{/images/5.jpg}" width="100%">
+			
+			
+		</div>
+	</div>
+    </div>
+</section>
+<!-- End Section Coding-->
+
+<!-- Start Footer Coding-->
+<footer>
+	<div>
+	&copy;
+	All rights are reserved under Alpha Health Care Hospital
+	
+	</div>
+</footer>
+<!-- End footer Coding-->
+</body>
+</html>

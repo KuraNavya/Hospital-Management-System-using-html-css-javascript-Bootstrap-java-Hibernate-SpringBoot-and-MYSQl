@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+ <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body {
+ background-image:url("place3.jpg");
+         background-size:cover;
+          height: 650px; 
+          background-position: center ; /* Center the image */
+  background-repeat: no-repeat; 
+}
+a {
+ text-decoration: none;
+}
+li {
+ list-style: none;
+}
+.navbar {
+ display: flex;
+ position: fixed;
+ align-items: center;
+ justify-content: space-between;
+ padding: 20px;
+ background-color: rgb(255, 0, 119);
+ color: #fff;
+ width: 100%;
+}
+.nav-links a {
+ color: #fff;
+}
+/* LOGO */
+.logo {
+ font-size: 40px;
+ color: black;
+ margin-left:55px;
+}
+.logo:hover{
+  color: blanchedalmond;
+}
+/* NAVBAR MENU */
+.menu {
+ display: flex;
+ gap: 5em;
+ font-size: 24px;
+}
+.menu li a:hover {
+ color: black;
+ border-radius: 1px;
+}
+.menu li {
+ padding: 5px 14px;
+}
+#home {
+  
+  height: 720px;
+  background-color: rgb(161, 79, 236);
+  text-align: center;
+  padding-top: 300px;
+  margin-top: 0px;
+  font-size: 72px;
+  color: bisque;
+}
+#patient{
+  height: 720px;
+  background-color: rgb(86, 223, 228);
+  position:auto;
+
+  
+  
+}
+.patient{
+  text-align: center;
+  padding-top: 300px;
+  font-size: 72px;
+  color:black;
+  padding-bottom: 60px;
+}
+#appointment{
+  background-color: rgb(178, 236, 186);
+  height: 650px;
+}
+.Appointments{
+  text-align: center;
+  padding-top: 300px;
+  font-size: 72px;
+  padding-bottom: 60px;
+  color: black;
+
+}
+ 
+
+ </style>
+ <body>
+    <header>
+        <div class="menu">
+            <!-- Start Brand name coding-->
+            <div class="brand-name">
+                <a href="index.html">             
+                </a>
+                </div>
+    </header>
+   <nav class="navbar">
+     <!-- LOGO -->
+     <div class="logo"> Doctor Page</div>
+     <!-- NAVIGATION MENU -->
+     <ul class="nav-links">
+       <!-- USING CHECKBOX HACK -->
+       
+       <!-- NAVIGATION MENUS -->
+       <div class="menu">
+        
+         <li><a th:href="@{/index}">Home</a></li>
+        
+         <li><a th:href="@{/viewappointment}">Appointments</a></li>    
+         
+       </div>
+     </ul>
+   </nav>
+   <section id="home">
+     Welcome to Doctors Page
+   </section>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<script>
+    function onlyNumberKey(evt) {
+          
+        // Only ASCII character in that range allowed
+       // var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+        // if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+          //  return false;*/
+        return true;
+    }
+    function phonenumber(inputtxt)
+    {
+      var phoneno = /^\d{10}$/;
+      if((inputtxt.value.match(phoneno))){
+    	  return true;
+          
+      }
+    		 
+    		 		  
+    		                     
+          else
+            {
+            alert("message");
+            return false;
+            }
+    }
+</script>
+<style>
+.button {
+	background-color: skyblue;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+input {
+	height: 17px;
+	width: 180px;
+	margin-left: 10px;
+}
+
+table tr td label {
+	text-align: right;
+	display: inline-block;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0 1em;
+	display: inline-block;
+	margin-top: 30px
+}
+
+table tr td {
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: right;
+}
+
+table tr {
+	padding: 15px;
+}
+</style>
+
+
+<style>
+.label {
+	margin-left: 10px;
+	width: 150px;
+	display: inline-block;
+}
+</style>
+<meta charset="ISO-8859-1">
+<title>Hospital</title>
+</head>
+<body>
+	<div id="container">
+		<ul>
+			<li>
+
+				<section id="adddoctor">
+					<div class="container">
+						<h2
+							style="background-color: skyblue; font-size: 30px; text-align: center">Patient
+							Appointment</h2>
+						<form th:action="@{/appointment_success}" name="appointmentForm"
+							th:object="${appointment}" method="post"
+							style="background-color: bisque; text-align: center">
+							<table>
+								<tr>
+									<td><label for="fullname" class="label"><b>
+												Patient Name :</b></label></td>
+									<td><input type="text" id="pname" name="patientname"
+										placeholder="patientname"
+										style="margin-top: 10px; height: 20px; width: 180px" required>
+									</td>
+								</tr>
+								<tr>
+									<td><label for="age" class="label"><b> Age :</b></label></td>
+									<td><input type="text" id="age" name="age"
+										placeholder="age" pattern="[0-1]{1}[0-9]{0,2}"
+										style="margin-top: 10px; height: 20px; width: 180px" required>
+
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2"><span class="error" id="lblError"></span>
+									</td>
+								</tr>
+								<tr>
+									<td><label for="fullname" class="label">
+								<b> Contact No :</b>
+								</label>
+								</td>
+								<td><input type="text" id="lname" name="contactno"
+									placeholder="Contact No"
+									style="margin-top: 10px; height: 20px; width: 180px" required>
+								</td>
+								</tr><tr>
+									<td><label for="fullname" class="label"><b>
+												Date :</b></label></td>
+									<td><input type="date" id="date" name="date"
+										placeholder="date"
+										style="margin-top: 10px; height: 20px; width: 180px" required></td>
+								</tr>
+								<tr>
+									<td><label for="fullname" class="label"><b>
+												Description :</b></label></td>
+									<td><input type="text" id="lname" name="discription"
+										placeholder="discription"
+										style="margin-top: 10px; height: 20px; width: 180px" required>
+									</td>
+								</tr>
+							</table>
+							<br />
+							<table style="margin-top: 0px;">
+								<tr>
+									<td>
+
+										<button class="button" required
+											onclick="phonenumber(document.appointmentForm.contactno)">Add</button>
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</section>
+			</li>
+		</ul>
+</body>
+</html>
